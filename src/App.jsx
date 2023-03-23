@@ -1,11 +1,10 @@
 import "./App.css";
-import Sidebar from "./components/Sidebar/Sidebar";
+import FormContainer from "./components/FormContainer/FormContainer";
 
 function App() {
   return (
     <>
-      <div className="App">Multisetp Form</div>
-      <Sidebar />
+      <FormContainer />
     </>
   );
 }

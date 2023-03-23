@@ -1,7 +1,5 @@
 .side-bar {
-    background-repeat: no-repeat;
-    background-size: contain;
-    padding: 2.5rem;
-    min-width: 350px;
-    min-height: 600px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 2.5rem 4rem 15rem 2rem;
 }
