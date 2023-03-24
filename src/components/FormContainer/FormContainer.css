@@ -1,7 +1,6 @@
 .container {
   background-color: var(--white);
   display: flex;
-  align-items: center;
   border-radius: 0.8rem;
   padding: 1rem;
 }

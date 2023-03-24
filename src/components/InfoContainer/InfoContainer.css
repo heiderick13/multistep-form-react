@@ -1,8 +1,29 @@
 .info-container {
+  position: relative;
   display: flex;
   flex-direction: column;
+  min-width: 30rem;
+  padding: 2rem;
+  text-align: left;
 }
 
-h1 {
-  color: black;
+.btn {
+  position: absolute;
+  max-width: 10rem;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-next {
+  background-color: var(--marine-blue);
+  color: var(--white);
+  bottom: 0;
+  right: 0;
+}
+
+.btn-next:hover {
+  filter: brightness(120%);
 }

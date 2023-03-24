@@ -1,5 +1,6 @@
 .side-bar {
   background-repeat: no-repeat;
   background-size: contain;
+  color: var(--white);
   padding: 2.5rem 4rem 15rem 2rem;
 }
