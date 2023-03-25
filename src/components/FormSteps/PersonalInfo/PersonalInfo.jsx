@@ -1,4 +1,4 @@
-import Input from "../Input/Input";
+import Input from "../../FormElements/Input/Input";
 
 function PersonalInfo() {
   return (

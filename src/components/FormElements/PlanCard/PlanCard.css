@@ -1,0 +1,7 @@
+.card {
+  min-width: 8rem;
+  line-height: 2;
+  border: 1px solid var(--purplish-blue);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}

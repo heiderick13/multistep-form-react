@@ -1,5 +1,4 @@
 import "./InfoContainer.css";
-import Input from "../Input/Input";
 
 function InfoContainer({ title, subtitle, content }) {
   return (
@@ -7,7 +6,12 @@ function InfoContainer({ title, subtitle, content }) {
       <h1>{title}</h1>
       <p>{subtitle}</p>
       {content}
-      <button className="btn btn-next">Next Step</button>
+      <div className="actions">
+        <button disabled className="btn btn-prev">
+          Go back
+        </button>
+        <button className="btn btn-next">Next Step</button>
+      </div>
     </div>
   );
 }
