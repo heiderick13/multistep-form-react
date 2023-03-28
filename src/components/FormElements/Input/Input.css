@@ -3,7 +3,9 @@ label {
   font-weight: 600;
 }
 
-input {
+.personal-input {
+  width: 100%;
+  margin-top: 0.5rem;
   padding: 1rem;
   border-radius: 0.5rem;
   border: 1px solid var(--light-gray);
