@@ -1,23 +1,55 @@
-import Add from "../../FormElements/Add/Add";
+import "./Pickadd.css";
 
-function Pickadd() {
+function Pickadd({ data, handleInputUpdate }) {
   return (
     <>
-      <Add
-        service={"Online Service"}
-        description={"Access to multiplayer games"}
-        price={"1"}
-      />
-      <Add
-        service={"Larger Storage"}
-        description={"Extra 1TB of cloud save"}
-        price={"2"}
-      />
-      <Add
-        service={"Customizable Profile"}
-        description={"Custom theme on your profile"}
-        price={"2"}
-      />
+      <label className="add-on">
+        <input
+          type="checkbox"
+          value="online"
+          checked={data.addOn === "online"}
+          onChange={(e) => {
+            handleInputUpdate("addOn", e.target.value);
+          }}
+        />
+        <span className="service-info">
+          <p className="service">Online Service</p>
+          <p className="service-description">Access to multiplayer games</p>
+        </span>
+        <span>+$1/mo</span>
+      </label>
+
+      <label className="add-on">
+        <input
+          type="checkbox"
+          value="storage"
+          checked={data.addOn === "storage"}
+          onChange={(e) => {
+            handleInputUpdate("addOn", e.target.value);
+          }}
+        />
+        <span className="service-info">
+          <p className="service">Larger Storage</p>
+          <p className="service-description">Extra 1TB of cloud save</p>
+        </span>
+        <span>+$2/mo</span>
+      </label>
+
+      <label className="add-on">
+        <input
+          type="checkbox"
+          value="customizable"
+          checked={data.addOn === "customizable"}
+          onChange={(e) => {
+            handleInputUpdate("addOn", e.target.value);
+          }}
+        />
+        <span className="service-info">
+          <p className="service">Customizable Profile</p>
+          <p className="service-description">Custom theme on your profile</p>
+        </span>
+        <span>+$2/mo</span>
+      </label>
     </>
   );
 }

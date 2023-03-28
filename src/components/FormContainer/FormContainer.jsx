@@ -51,7 +51,7 @@ function FormContainer() {
       data={data}
       title={"Pick add-ons"}
       subtitle={"Add-ons help enhance your gaming experience."}
-      content={<Pickadd data={data} />}
+      content={<Pickadd data={data} handleInputUpdate={handleInputUpdate} />}
     />
   );
 
