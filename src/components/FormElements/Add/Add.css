@@ -1,0 +1,30 @@
+.add-on {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.add-on:hover {
+  border-color: var(--purplish-blue);
+}
+
+.add-on:has(input[type="checkbox"]:checked) {
+  background: var(--magnolia);
+  border-color: var(--purplish-blue);
+}
+
+.service-description {
+  color: var(--light-gray);
+  font-weight: 400;
+}
+
+.add-on span:nth-of-type(2) {
+  font-weight: 400;
+  flex-grow: 1;
+  text-align: end;
+  color: var(--purplish-blue);
+}
