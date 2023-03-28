@@ -1,3 +1,5 @@
+import "./PersonalInfo.css";
+
 function PersonalInfo({ data, handleInputUpdate }) {
   return (
     <>
