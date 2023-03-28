@@ -37,7 +37,7 @@ function FormContainer() {
 
   return (
     <div className="container">
-      <Sidebar />
+      <Sidebar currentStep={currentStep} />
       {currentComponent}
       <div className="actions">
         <button

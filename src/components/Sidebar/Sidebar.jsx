@@ -2,14 +2,29 @@ import "./Sidebar.css";
 import bgImage from "../../assets/images/bg-sidebar-desktop.svg";
 import Step from "../Step/Step";
 
-function Sidebar() {
+function Sidebar({ currentStep }) {
   return (
     <nav className="side-bar" style={{ backgroundImage: `url(${bgImage})` }}>
-      <Step stepNum={'1'} title={'YOUR INFO'}/>
-      <Step stepNum={'2'} title={'SELECT PLAN'}/>
-      <Step stepNum={'3'} title={'ADD-ONS'}/>
-      <Step stepNum={'4'} title={'SUMMARY'}/>
-
+      <Step
+        active={currentStep >= 0 ? "active" : ""}
+        stepNum={"1"}
+        title={"YOUR INFO"}
+      />
+      <Step
+        active={currentStep >= 1 ? "active" : ""}
+        stepNum={"2"}
+        title={"SELECT PLAN"}
+      />
+      <Step
+        active={currentStep >= 2 ? "active" : ""}
+        stepNum={"3"}
+        title={"ADD-ONS"}
+      />
+      <Step
+        active={currentStep >= 3 ? "active" : ""}
+        stepNum={"4"}
+        title={"SUMMARY"}
+      />
     </nav>
   );
 }

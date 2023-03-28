@@ -1,25 +1,30 @@
 .step {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .step span {
-    padding: .5rem 1rem;
-    border: 1px solid var(--white);
-    border-radius: 5rem;
-    font-weight: 700;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--white);
+  border-radius: 5rem;
+  font-weight: 700;
+}
+
+.step span.active {
+  color: var(--marine-blue);
+  background: var(--alabaster);
 }
 
 .step p {
-    text-align: left;
+  text-align: left;
 }
 
 .text p:nth-of-type(1) {
-    opacity: .6;
+  opacity: 0.6;
 }
 
 .text p:nth-of-type(2) {
-    font-weight: 700;
+  font-weight: 700;
 }
