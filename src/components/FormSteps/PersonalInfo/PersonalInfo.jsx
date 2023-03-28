@@ -1,26 +1,41 @@
-import Input from "../../FormElements/Input/Input";
-
-function PersonalInfo() {
+function PersonalInfo({ data, handleInputUpdate }) {
   return (
     <>
-      <Input
-        id={"name"}
-        label={"Name"}
-        type={"text"}
-        placeHolder={"e.g. Jonh Doe"}
-      />
-      <Input
-        id={"email"}
-        label={"Email Address"}
-        type={"email"}
-        placeHolder={"e.g. john@example.com"}
-      />
-      <Input
-        id={"phone"}
-        label={"Phone Number"}
-        type={"tel"}
-        placeHolder={"e.g. 12 34567-8910"}
-      />
+      <label>
+        Name
+        <input
+          className="personal-input"
+          type="text"
+          placeholder="e.g. John Doe"
+          required
+          value={data.name || ""}
+          onChange={(e) => handleInputUpdate("name", e.target.value)}
+        />
+      </label>
+
+      <label>
+        Email
+        <input
+          className="personal-input"
+          type="email"
+          placeholder="e.g. john@email.com"
+          required
+          value={data.email || ""}
+          onChange={(e) => handleInputUpdate("email", e.target.value)}
+        />
+      </label>
+
+      <label>
+        Phone number
+        <input
+          className="personal-input"
+          type="tel"
+          placeholder="e.g. 123456789"
+          required
+          value={data.phone || ""}
+          onChange={(e) => handleInputUpdate("phone", e.target.value)}
+        />
+      </label>
     </>
   );
 }

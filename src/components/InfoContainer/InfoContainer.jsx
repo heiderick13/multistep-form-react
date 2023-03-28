@@ -1,7 +1,7 @@
 import "./InfoContainer.css";
 // import { useForm } from "../../hooks/useForm";
 
-function InfoContainer({ title, subtitle, content }) {
+function InfoContainer({ data, title, subtitle, content }) {
   // const { changeStep } = useForm();
 
   return (
