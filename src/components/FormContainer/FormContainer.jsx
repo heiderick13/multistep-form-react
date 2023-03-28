@@ -4,6 +4,7 @@ import InfoContainer from "../InfoContainer/InfoContainer";
 import PersonalInfo from "../FormSteps/PersonalInfo/PersonalInfo";
 import Plans from "../FormSteps/Plans/Plans";
 import Pickadd from "../FormSteps/Pickadd/Pickadd";
+import ThankYou from "../FormSteps/ThankYou/ThankYou";
 
 import { useForm } from "../../hooks/useForm";
 
@@ -39,13 +40,7 @@ function FormContainer() {
     />
   );
 
-  const thankYou = (
-    <InfoContainer
-      title={"Thank you for subscribing"}
-      subtitle={""}
-      content={""}
-    />
-  );
+  const thankYou = <ThankYou />;
 
   const formSteps = [personalInfo, plansInfo, addOns, finishUp, thankYou];
 

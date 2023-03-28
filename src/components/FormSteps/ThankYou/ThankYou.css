@@ -1,0 +1,13 @@
+.thank-container {
+  align-self: center;
+  padding-inline: 2rem;
+}
+
+.thank-container h1 {
+  margin: 1.5rem 0;
+}
+
+.thank-container p {
+  max-width: 30rem;
+  color: var(--cool-gray);
+}
