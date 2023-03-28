@@ -6,8 +6,8 @@ function Pickadd({ data, handleInputUpdate }) {
       <label className="add-on">
         <input
           type="checkbox"
-          value="online"
-          checked={data.addOn === "online"}
+          value="online service"
+          checked={data.addOn === "online service"}
           onChange={(e) => {
             handleInputUpdate("addOn", e.target.value);
           }}
@@ -22,8 +22,8 @@ function Pickadd({ data, handleInputUpdate }) {
       <label className="add-on">
         <input
           type="checkbox"
-          value="storage"
-          checked={data.addOn === "storage"}
+          value="larger storage"
+          checked={data.addOn === "larger storage"}
           onChange={(e) => {
             handleInputUpdate("addOn", e.target.value);
           }}
@@ -38,8 +38,8 @@ function Pickadd({ data, handleInputUpdate }) {
       <label className="add-on">
         <input
           type="checkbox"
-          value="customizable"
-          checked={data.addOn === "customizable"}
+          value="customizable profile"
+          checked={data.addOn === "customizable profile"}
           onChange={(e) => {
             handleInputUpdate("addOn", e.target.value);
           }}

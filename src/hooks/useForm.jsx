@@ -17,6 +17,5 @@ export function useForm(steps) {
     changeStep,
     isLastStep: currentStep + 1 === steps.length - 1 ? true : false,
     isFirstStep: currentStep === 0 ? true : false,
-    isThankYouStep: currentStep === steps.length ? true : false,
   };
 }

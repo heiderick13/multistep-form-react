@@ -1,0 +1,17 @@
+.finish {
+  margin-top: 2rem;
+  background: var(--magnolia);
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+  padding: 1rem;
+}
+
+.finish span {
+  color: var(--cool-gray);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.finish h2 {
+  margin-bottom: 1rem;
+}

@@ -5,6 +5,7 @@ import PersonalInfo from "../FormSteps/PersonalInfo/PersonalInfo";
 import Plans from "../FormSteps/Plans/Plans";
 import Pickadd from "../FormSteps/Pickadd/Pickadd";
 import ThankYou from "../FormSteps/ThankYou/ThankYou";
+import FinishUp from "../FormSteps/FinishUp/FinishUp";
 
 import { useForm } from "../../hooks/useForm";
 import { useState } from "react";
@@ -60,7 +61,7 @@ function FormContainer() {
       data={data}
       title={"Finishing up"}
       subtitle={"Double-check if everything looks OK before confirming"}
-      content={""}
+      content={<FinishUp data={data} />}
     />
   );
 
@@ -68,19 +69,17 @@ function FormContainer() {
 
   const formSteps = [personalInfo, plansInfo, addOns, finishUp, thankYou];
 
-  const {
-    currentStep,
-    currentComponent,
-    changeStep,
-    isLastStep,
-    isFirstStep,
-    isThankYouStep,
-  } = useForm(formSteps);
+  const { currentStep, currentComponent, changeStep, isLastStep, isFirstStep } =
+    useForm(formSteps);
 
   return (
     <div className="container">
       <Sidebar currentStep={currentStep} />
-      <form onSubmit={(e) => changeStep(currentStep + 1, e)}>
+      <form
+        onSubmit={(e) => {
+          changeStep(currentStep + 1, e);
+        }}
+      >
         {currentComponent}
         <div className="actions">
           {!isFirstStep && (
