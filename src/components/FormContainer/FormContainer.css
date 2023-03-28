@@ -42,3 +42,12 @@
 .btn-prev:hover {
   opacity: 1;
 }
+
+.btn-confirm {
+  background: var(--purplish-blue);
+  color: var(--white);
+}
+
+.btn-confirm:hover {
+  filter: brightness(120%);
+}

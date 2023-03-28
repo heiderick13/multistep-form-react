@@ -14,7 +14,8 @@
 
 .step span.active {
   color: var(--marine-blue);
-  background: var(--alabaster);
+  background: var(--pastel-blue);
+  border-color: var(--pastel-blue);
 }
 
 .step p {
