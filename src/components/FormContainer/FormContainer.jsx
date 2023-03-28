@@ -42,7 +42,7 @@ function FormContainer() {
       data={data}
       title={"Select your plan"}
       subtitle={"Choose your monthly subscription."}
-      content={<Plans data={data} />}
+      content={<Plans data={data} handleInputUpdate={handleInputUpdate} />}
     />
   );
 
