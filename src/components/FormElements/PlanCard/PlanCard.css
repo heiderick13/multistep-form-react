@@ -1,7 +1,22 @@
 .card {
   min-width: 8rem;
+  background: var(--card-bg);
   line-height: 2;
-  border: 1px solid var(--purplish-blue);
+  border: 1px solid var(--light-gray);
   border-radius: 0.5rem;
   padding: 1rem;
+  cursor: pointer;
+}
+
+.card:hover {
+  border-color: var(--purplish-blue);
+}
+
+.card input[type="checkbox"] {
+  display: none;
+}
+
+.card:has(input[type="checkbox"]:checked) {
+  background: var(--magnolia);
+  border-color: var(--purplish-blue);
 }
