@@ -31,10 +31,32 @@ function FormContainer() {
     />
   );
 
-  const formSteps = [personalInfo, plansInfo, addOns];
+  const finishUp = (
+    <InfoContainer
+      title={"Finishing up"}
+      subtitle={"Double-check if everything looks OK before confirming"}
+      content={""}
+    />
+  );
 
-  const { currentStep, currentComponent, changeStep, isLastStep, isFirstStep } =
-    useForm(formSteps);
+  const thankYou = (
+    <InfoContainer
+      title={"Thank you for subscribing"}
+      subtitle={""}
+      content={""}
+    />
+  );
+
+  const formSteps = [personalInfo, plansInfo, addOns, finishUp, thankYou];
+
+  const {
+    currentStep,
+    currentComponent,
+    changeStep,
+    isLastStep,
+    isFirstStep,
+    isThankYouStep,
+  } = useForm(formSteps);
 
   return (
     <div className="container">
@@ -59,7 +81,13 @@ function FormContainer() {
         ) : (
           <button
             className="btn btn-confirm"
-            onClick={() => changeStep(currentStep + 1)}
+            onClick={() => {
+              changeStep(currentStep + 1);
+              let btns = document.querySelectorAll(".btn");
+              btns.forEach((btn) => {
+                btn.style.display = "none";
+              });
+            }}
           >
             Confirm
           </button>
