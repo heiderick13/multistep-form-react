@@ -3,6 +3,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import InfoContainer from "../InfoContainer/InfoContainer";
 import PersonalInfo from "../FormSteps/PersonalInfo/PersonalInfo";
 import Plans from "../FormSteps/Plans/Plans";
+import Pickadd from "../FormSteps/Pickadd/Pickadd";
 
 import { useForm } from "../../hooks/useForm";
 
@@ -21,15 +22,16 @@ function FormContainer() {
       content={<Plans />}
     />
   );
-  // const addOns = (
-  //   <InfoContainer
-  //     title={"Pick add-ons"}
-  //     subtitle={"Add-ons help enhance your gaming experience."}
-  //     content={<AddOns />}
-  //   />
-  // );
 
-  const formSteps = [personalInfo, plansInfo];
+  const addOns = (
+    <InfoContainer
+      title={"Pick add-ons"}
+      subtitle={"Add-ons help enhance your gaming experience."}
+      content={<Pickadd />}
+    />
+  );
+
+  const formSteps = [personalInfo, plansInfo, addOns];
 
   const { currentStep, currentComponent, changeStep } = useForm(formSteps);
 
