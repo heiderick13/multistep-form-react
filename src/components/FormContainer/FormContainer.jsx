@@ -44,14 +44,8 @@ function FormContainer() {
 
   const formSteps = [personalInfo, plansInfo, addOns, finishUp, thankYou];
 
-  const {
-    currentStep,
-    currentComponent,
-    changeStep,
-    isLastStep,
-    isFirstStep,
-    isThankYouStep,
-  } = useForm(formSteps);
+  const { currentStep, currentComponent, changeStep, isLastStep, isFirstStep } =
+    useForm(formSteps);
 
   return (
     <div className="container">
