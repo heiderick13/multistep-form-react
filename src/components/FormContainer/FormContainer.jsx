@@ -82,14 +82,14 @@ function FormContainer() {
       >
         {currentComponent}
         <div className="actions">
-          {!isFirstStep && (
+          {/* {!isFirstStep && (
             <button
               className="btn btn-prev"
               onClick={() => changeStep(currentStep - 1)}
             >
               Go back
             </button>
-          )}
+          )} */}
           {!isLastStep ? (
             <button className="btn btn-next">Next Step</button>
           ) : (
