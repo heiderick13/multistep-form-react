@@ -75,28 +75,31 @@ function FormContainer() {
   return (
     <div className="container">
       <Sidebar currentStep={currentStep} />
-      <form
-        onSubmit={(e) => {
-          changeStep(currentStep + 1, e);
-        }}
-      >
+      <form>
         {currentComponent}
         <div className="actions">
-          {/* {!isFirstStep && (
+          {!isFirstStep && (
             <button
               className="btn btn-prev"
-              onClick={() => changeStep(currentStep - 1)}
+              onClick={(e) => changeStep(currentStep - 1, e)}
             >
               Go back
             </button>
-          )} */}
+          )}
           {!isLastStep ? (
-            <button className="btn btn-next">Next Step</button>
+            <button
+              onClick={(e) => {
+                changeStep(currentStep + 1, e);
+              }}
+              className="btn btn-next"
+            >
+              Next Step
+            </button>
           ) : (
             <button
               className="btn btn-confirm"
-              onClick={() => {
-                changeStep(currentStep + 1);
+              onClick={(e) => {
+                changeStep(currentStep + 1, e);
                 let btns = document.querySelectorAll(".btn");
                 btns.forEach((btn) => {
                   btn.style.display = "none";
